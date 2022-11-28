@@ -1,0 +1,4 @@
+let a = "Vladislav";
+let b = "Matyukhin";
+
+console.log(`${a} ${b}`);

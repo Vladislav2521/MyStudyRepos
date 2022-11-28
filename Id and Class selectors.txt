@@ -1,0 +1,15 @@
+HOW TO CHANGE THE COLOUR OF THE ID ELEMENT
+
+const divWithId = document.getElementById("div-id");
+divWithId.style.color = "blue";
+----------------------------------------------------------------------
+HOW TO CHANGE THE COLOUR OF THE CLASS ELEMENTS(ALL OF THEM)
+
+const divsWithClass = document.getElementsByClassName("div-class");
+const divsWithClassArray = Array.from(divsWithClass);
+divsWithClassArray.forEach((div) => (div.style.color = "green"));
+----------------------------------------------------------------------
+HOW TO CHANGE THE COLOUR OF SEPARATE CLASS ELEMENTS
+
+const divsWithClass = document.getElementsByClassName("div-class");
+divsWithClass[0].style.color = "orange";

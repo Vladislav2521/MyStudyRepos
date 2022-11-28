@@ -1,0 +1,43 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div {
+            color:black;
+        }
+        div > div {
+            margin-left: .5rem;
+            padding-left: .25rem;
+            border-left: 1px solid #777;
+        }
+        </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="grand-parent">
+        Grand Parent
+        <div>
+            Parent 1
+            <div>Child 1</div>
+            <div>Child 2</div>
+        </div>
+        <div>Parent 2</div>
+    </div>
+</body>
+</html>
+--------------------------------------------------
+JS
+const grandParent = document.querySelector("#grand-parent");
+const parentOne = grandParent.children[0];
+const parentTwo = parentOne.nextElementSibling;
+const childOne = parentOne.children[0];
+const childTwo = parentOne.children[1];
+
+grandParent.style.color = "lightgreen";
+parentOne.style.color = "orange";
+parentTwo.style.color = "orange";
+childOne.style.color = "skyblue";
+childTwo.style.color = "skyblue";

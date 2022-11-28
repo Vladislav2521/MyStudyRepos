@@ -1,0 +1,9 @@
+let arr = [6, 7, 3, 5, 9, 8];
+console.log(Math.min(6, 7, 3, 5, 8, 9));
+console.log(arr.includes(7, 1));
+console.log(arr.indexOf(8));
+console.log(arr.find((element) => element > 8));
+console.log(arr.some((element) => element > 8));
+console.log(arr.filter((element) => element < 5 || element > 8));
+console.log(arr.map((element) => element * element));
+// Вывести новый массив в котором каждый элемент будет возведен в степень самого себя. (можно юзать мап)

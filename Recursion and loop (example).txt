@@ -1,0 +1,13 @@
+ for (let i = 1; i <= 10; i++) {
+ console.log(i);
+}
+
+function printNumber(number) {
+  if (number > 2) return;
+  console.log(number);
+  printNumber(number + 1);
+  console.log("exiting function");
+}
+
+printNumber(1);
+console.log("end");

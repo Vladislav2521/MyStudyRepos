@@ -1,0 +1,60 @@
+const x = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const y = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(x[0], y[0]);
+console.log(x[0], y[1]);
+console.log(x.length);
+for (let index = 0; index < x.length; index++) {
+  const element = x[index];
+  console.log(element);
+}
+--------------------------------------------------------------
+Метод .find
+let people = [
+  { id: 1, name: "Ivan" },
+  { id: 2, name: "Masha" },
+  { id: 3, name: "Alex" },
+  { id: 4, name: "Kate" },
+];
+let a = people.find(function (item) {
+  if (item.id == 3) return item;
+});
+console.log(a);
+--------------------------------------------------------------
+Метод .filter
+let people = [
+  { id: 1, name: "Ivan" },
+  { id: 2, name: "Masha" },
+  { id: 3, name: "Alex" },
+  { id: 4, name: "Kate" },
+];
+let a = people.filter(function (item) {
+  if (item.id < 3) return item;
+});
+console.log(a);
+-------------------------------------------------------------
+Метод .map
+let arr = [5, 7, 9, 1, 0];
+let newArr = arr.map(function (item) {
+  return item * 3;
+});
+console.log(newArr);
+-------------------------------------------------------------
+Задания по массивам
+let arr = [];
+for (let i = 0; i < 20; i += 4) {
+  arr.push(i);
+}
+console.log(arr);
+-------------------------------------------------------------
+const a = [
+  [1, 2, 3, 4, 5],
+  [6, 7, 8, 9, 10],
+  [11, 12, 13, 14, 15],
+];
+console.log(a[0][3]);
+console.log(a[1][2]);
+console.log(a[2][0]);
+console.log(a.length);
+
+

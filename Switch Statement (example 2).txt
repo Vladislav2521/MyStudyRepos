@@ -1,0 +1,27 @@
+const number = 6;
+
+switch (number) {
+  case 0:
+    console.log("it is zero");
+    break;
+  case 1:
+  case 2:
+    console.log("it is small");
+    break;
+  case 3:
+  case 4:
+    console.log("it is medium");
+    break;
+  case 5:
+    console.log("it is large");
+    break;
+  default:
+    console.log("try again");
+}
+
+// Create a switch that checks to see the value of the number variable
+// If the number is 0 print out "it is zero"
+// If the number is 1 or 2 print out "it is small"
+// If the number is 3 or 4 print out "it is medium"
+// If the number is 5 print out "it is large"
+// If the number is none of these print out "try again"

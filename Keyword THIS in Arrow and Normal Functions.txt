@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <button>Click Me</button>
+</body>
+</html>
+
+
+
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", (e) => {
+  console.log("Arrow This");
+  console.log(this);
+});
+
+button.addEventListener("click", function (e) {
+  console.log("Function This");
+  console.log(this);
+});

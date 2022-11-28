@@ -1,0 +1,66 @@
+function sum(a, b) {
+  return a + b;
+}
+
+let sumArrow = (a, b) => {
+  return a + b;
+};
+
+console.log(sumArrow(1, 2));
+
+---------------------------------
+
+function printName(name) {
+  console.log(name);
+}
+
+let printNameArrow = (name) => {
+  console.log(name);
+};
+
+printName("Kyle");
+
+---------------------------------
+function sum(a, b) {
+  return a + b;
+}
+
+let sumArrow = (a, b) => {
+  return a + b;
+};
+
+console.log(sumArrow(1, 2));
+
+--------------------------------
+function sum(a, b) {
+  return a + b;
+}
+
+let sumArrow = (a, b) => a + b;
+
+console.log(sumArrow(1, 2));
+
+-------------------------------
+function printHi(name) {
+  return "Hi" + name;
+}
+
+let printHiArrow = (name) => "Hi" + name;
+
+console.log(printHiArrow("Vladislav"));
+
+-------------------------------
+let hiArrow = () => {
+  console.log("hi");
+};
+
+hiArrow();
+-------------------------------
+function func(x, callback) {
+  callback(x);
+}
+func(10, function (variable) {
+  console.log(variable);
+});
+
+

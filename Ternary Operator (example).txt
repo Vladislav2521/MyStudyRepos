@@ -1,0 +1,11 @@
+const isUserLoggedIn = true;
+
+// let welcomeMessage = "";
+// if (isUserLoggedIn) {
+//   welcomeMessage = "welcome";
+// } else {
+//   welcomeMessage = "please log in";
+// }
+
+const welcomeMessage = isUserLoggedIn ? "welcome" : "please log in";
+console.log(welcomeMessage);

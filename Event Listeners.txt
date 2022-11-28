@@ -1,0 +1,20 @@
+const btn = document.querySelector("[data-btn]");
+function printClick() {
+  console.log("clicked");
+}
+
+btn.addEventListener("click", printClick);
+btn.removeEventListener("click", printClick);
+---------------------------------------------------------
+const input = document.querySelector("[data-input-text]");
+const form = document.querySelector("[data-form]");
+
+input.addEventListener("input", (e) => {
+  console.log(e.target.value === "");
+});
+---------------------------------------------------------
+const link = document.querySelector("a");
+
+window.addEventListener("resize", (a) => {
+  console.log("resize");
+});

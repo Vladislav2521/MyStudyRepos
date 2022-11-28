@@ -1,0 +1,55 @@
+let a = 10;
+let b = "Hi";
+c = { name: "Vlad" }; // 0x01
+d = c;
+d.name = "Joe"; // 0x01
+
+console.log("a = " + a);
+console.log("b = " + b);
+console.log("c = " + JSON.stringify(c));
+console.log("d = " + JSON.stringify(d));
+------------------------------------------------
+let a = 10;
+let b = "Hi";
+c = { name: "Vlad" }; // 0x01
+d = c;
+d = "Joe";
+
+console.log("a = " + a);
+console.log("b = " + b);
+console.log("c = " + JSON.stringify(c));
+console.log("d = " + JSON.stringify(d));
+-----------------------------------------------
+let a = [1, 2];
+let b = [1, 2];
+
+console.log(a === b);
+
+a.push(3);
+console.log(a);
+console.log(b);
+------------------------------------------------
+Adding new property to an object without redefining the location
+const a = { name: "Vlad" }; // 0x01
+a.age = 28;
+
+console.log(a);
+------------------------------------------------
+MODIFICATION OF const elementToAdd
+
+const a = [1, 2]; // 0x01
+const elementToAdd = 3; // 3
+
+add(a, elementToAdd); // 0x01, 3
+
+console.log(a);
+console.log(elementToAdd);
+
+function add(array, element) {
+  element = element + 1; // 4
+  array.push(element); // 0x01
+}
+
+const array = a;
+array.push(4);
+

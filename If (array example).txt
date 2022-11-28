@@ -1,0 +1,18 @@
+// Create a variable that contains an array.
+// Using an if statement with else if I want you to check the lenght of the array.
+// If it is empty print out "empty".
+// If it has less than 5 elements print out "small".
+// If it has less than 10 elements print out "medium".
+// Otherwise print out "large".
+
+const myArr = [2, 3, 3, 0, 2, 4, 5, 6, 2, 4, 5, 7, 1];
+
+if (myArr.length === 0) {
+  console.log("empty array");
+} else if (myArr.length < 5) {
+  console.log("small array");
+} else if (myArr.length < 10) {
+  console.log("medium array");
+} else {
+  console.log("large array");
+}

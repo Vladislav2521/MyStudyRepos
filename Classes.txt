@@ -1,0 +1,50 @@
+var originalLog = console.log;
+console.log = function (obj) {
+  originalLog(JSON.parse(JSON.stringify(obj)));
+};
+
+class Bot {
+  name;
+  health;
+  energy = 100;
+  shield = 100;
+  x = 10;
+  y = 10;
+
+  constructor(name, health, energy, shield = 100) {
+    this.name = name;
+    this.health = health;
+    this.energy = energy;
+    this.shield = shield;
+  }
+  MoveForward() {
+    if (this.energy >= 5) {
+      this.y++;
+      this.energy -= 5;
+      console.log("success");
+    } else {
+      console.log("failed");
+    }
+    console.log(this);
+  }
+  MoveBackward() {
+    if (this.energy >= 5) {
+      this.y--;
+      this.energy -= 5;
+      console.log("success");
+    } else {
+      console.log("failed");
+    }
+    console.log(this);
+  }
+  Damage(attackPower) {
+    this.shield -= attackPower;
+    console.log(this);
+  }
+}
+
+const robot1 = new Bot("Harry", 120, 5, 100); // Создание экземпляра класса
+// const robot2 = new Bot("Mary", 50);
+console.log(robot1);
+robot1.Damage(24);
+robot1.Damage(26);

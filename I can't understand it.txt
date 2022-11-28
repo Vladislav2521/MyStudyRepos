@@ -1,0 +1,280 @@
+function printVariable(variable) {
+  console.log(variable);
+}
+function PrintName(name, callback) {
+  callback("Hello" + name);
+}
+
+PrintName("Vladislav", printVariable);
+
+// Create a new function that takes
+// two parameters
+// 1. name
+// 2. callback that prints out what we pass
+//to it (printVariable)
+// Take name ana append "Hello" to the beginning
+// of the name
+// If I pass in "Kyle"
+//It will print "Hello Kyle"
+
+-----------------------------------------------------
+function doStuff(a, b, name) {
+  print(sum(a, b));
+  print(sayHi(name));
+}
+
+function print(variable) {
+  console.log(variable);
+}
+
+function sum(a, b) {
+  return a + b;
+}
+
+function sayHi(name) {
+  return "Hi" + name;
+}
+
+doStuff(1, 2, "Kyle");
+
+-----------------------------------------------------
+(Нихрена не понимаю, почему этот код не выводится в консоли)
+
+let myFunction = function () {
+  let name = "Todd";
+  let myOtherFunction = function () {
+    console.log("My name is " + name);
+  };
+  console.log(name);
+  myOtherFunction();
+};
+----------------------------------------------------
+(Recursion)
+
+let myFunction = function () {
+  let name = "Todd";
+  let myOtherFunction = function () {
+    console.log("My name is " + name);
+  };
+  console.log(name);
+  myOtherFunction();
+  myFunction();
+};
+myFunction();
+
+----------------------------------------------------
+let myFunction = function () {
+  let name = "Todd";
+  let myOtherFunction = function () {
+    console.log("My name is " + name);
+  };
+  console.log(name);
+  myOtherFunction();
+};
+setInterval(() => {
+  myFunction();
+}, 2000);
+
+----------------------------------------------------
+let global = 7;
+let myFunction = function () {
+  let a = 5;
+  a = a + 1;
+  console.log(a);
+  global = global + 1;
+  console.log(global);
+};
+setInterval(() => {
+  myFunction();
+}, 1000);
+
+---------------------------------------------------
+(The other way)
+
+let global = 7;
+let myFunction = function () {
+  let a = 5;
+  a++;
+  console.log(a);
+  global++;
+  console.log(global);
+};
+setInterval(() => {
+  myFunction();
+}, 1000);
+
+----------------------------------------------------
+let global = 7;
+let myFunction = function () {
+  let a = 5;
+  a++;
+  console.log(a);
+  global++;
+  console.log(global);
+};
+setInterval(() => {
+  myFunction();
+}, 1000);
+
+---------------------------------------------------
+
+let global = 7;
+let myFunction = function () {
+  let a = 5;
+  a += 2;
+  console.log(a);
+  // global--;
+  // console.log(global);
+};
+setInterval(() => {
+  myFunction();
+}, 1000);
+
+_--------------------------------------------------
+let global = 7;
+let myFunction = function () {
+  let a = 5;
+  a += 2;
+  console.log(a);
+  // global--;
+  // console.log(global);
+};
+setInterval(() => {
+  myFunction();
+}, 1000);
+
+--------------------------------------------------
+(Приоритет выполнения операторов)
+
+let global = 7;
+let myFunction = function () {
+  let a = 5;
+  a += 2;
+  console.log(a);
+  // global--;
+  // console.log(global);
+};
+setInterval(() => {
+  myFunction();
+}, 1000);
+--------------------------------------------------
+let a = 5;
+let b = 6;
+let myFunction = function () {
+  return (a + b) * 2;
+};
+console.log(myFunction());
+
+
+
+---------------------------------------------------
+
+HOMETASK (try to understand it)
+let a = 5;
+let b = 6;
+let c = 7;
+let myFunction = function (v1, v2) {
+  return (v1 + v2) * 2;
+};
+console.log(myFunction(a, b));
+console.log(myFunction(a, c));
+console.log(myFunction(b, c));
+---------------------------------------------------
+let a = 5;
+let b = 6;
+let c = 7;
+let myFunction = function (v1, v2) {
+  return v1 + v2;
+};
+console.log(myFunction(a, b));
+console.log(myFunction(a, c));
+console.log(myFunction(b, c)); 
+/* Я могу вставлять любые переменные в myFunction
+ в консоль логе (они туда импортируются из global scope)
+ и именно эти переменные из global scope будут входить в выражение
+ v1 + v2; то-есть, например:
+v1 = a 
+v2 = b
+
+----------------------------------------------------
+let a = 5;
+let b = 6;
+let c = 7;
+let sumFunction = function (v1, v2) {
+  return v1 + v2;
+};
+
+let multFunc = function (v1, v2) {
+  return v1 * v2;
+};
+
+let sumMultFunc = function (v1, v2) {
+  return sumFunction(v1, v2) + multFunc(v1, v2);
+};
+console.log(sumMultFunc(a, b));
+console.log(sumMultFunc(a, c));
+console.log(sumMultFunc(b, c));
+
+/* Я могу вставлять любые переменные в myFunction
+ в консоль логе (они туда импортируются из global scope)
+ и именно эти переменные из global scope будут входить в выражение
+ v1 + v2; то-есть, например:
+v1 = a 
+v2 = b */
+-------------------------------------------------------
+
+let a = 5;
+
+a++;
+a++;
+a++;
+a++;
+a++;
+a++;
+a++;
+a++;
+a++;
+a++;
+console.log(a);
+
+-------------------------------------------------------
+(Цикл со счетчиком)
+
+let a = 2;
+let countNum = 10;
+
+let multFunc = function (v1, v2) {
+  return v1 * v2;
+};
+
+for (let index = 0; index < countNum; index++) {
+  a = multFunc(a, 2);
+  a = a - 1;
+  a = a + 3;
+  a = 10 - a;
+  a = multFunc(a, 4);
+}
+
+console.log(a);
+//
+
+-------------------------------------------------------
+let a = 1000000;
+let b = 10;
+let countIteration = 0;
+while (a > b) {
+  a = a / 2;
+  if (a < b) {
+
+  }
+  else { 
+
+  }
+  countIteration++;
+}
+
+console.log(countIteration);
+// Делить а на 2 до тех пор пока
+// переменная а не станет меньше 10
+
+

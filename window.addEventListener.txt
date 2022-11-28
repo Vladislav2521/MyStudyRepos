@@ -1,0 +1,5 @@
+const alert = "message";
+
+window.addEventListener("resize" , () => {
+  console.log("resized");
+});

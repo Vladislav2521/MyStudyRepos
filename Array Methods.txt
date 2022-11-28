@@ -1,0 +1,97 @@
+.forEach method
+______________________
+const a = [1, 2, 3, 4, 5];
+
+
+a.forEach((number, index) => {
+  console.log(number + " " + index);
+});
+------------------------------------------
+Method .map with reference
+_____________________________
+const a = [1, 2, 3, 4, 5];
+const b = [2, 5, 6, 8, 10];
+
+a.map((number) => {
+  return number * 2;
+});
+
+console.log(a);
+------------------------------------------
+Method .map with new variable to avoid reference
+____________________________
+const a = [1, 2, 3, 4, 5];
+const b = [2, 5, 6, 8, 10];
+
+const newArr = a.map((number) => {
+  return number * 2;
+});
+
+console.log(newArr);
+-------------------------------------------
+Method .filter (example)
+_____________________________________
+const a = [1, 2, 3, 4, 5, 6, 7];
+const b = [1, 2];
+
+const newArr = a.filter((number) => {
+  return number > 3;
+});
+
+console.log(newArr);
+-------------------------------------------
+Method .some (example)
+_____________________________________
+const a = [1, 2, 3, 4, 5, 6, 7];
+const b = [1, 2];
+
+const isTrue = a.some((number) => {
+  return number > 3;
+});
+
+console.log(isTrue);
+-------------------------------------------
+Method .every (example)
+_______________________________________
+const a = [1, 2, 3, 4, 5, 6, 7];
+const b = [1, 2];
+
+const isTrue = a.every((number) => {
+  return number > 0;
+});
+
+console.log(isTrue);
+---------------------------------------------
+Method .reduce (example)
+_________________________
+const a = [1, 2, 3, 4, 5, 6, 7];
+const b = [1, 2];
+
+const s = a.reduce((sum, number) => {
+  return sum + number;
+}, 0);
+
+console.log(s);
+---------------------------------------------
+Method .reduce (expanded example)
+__________________________________
+const items = [
+  { price: 10 },
+  { price: 20 },
+  { price: 14 },
+  { price: 1 },
+  { price: 6 },
+];
+
+const total = items.reduce((sum, item) => {
+  return sum + item.price;
+}, 0);
+
+console.log(total);
+-----------------------------------------------
+Method .includes
+______________________
+const a = [1, 2, 3, 4, 5];
+
+const result = a.includes(6);
+console.log(result);

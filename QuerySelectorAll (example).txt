@@ -1,0 +1,6 @@
+const dataAttributeElement = document.querySelector("[data-test]");
+
+const divsWithClasses = document.querySelectorAll(".div-class");
+divsWithClasses.forEach((div) => (div.style.color = "red"));
+
+console.log(divsWithClasses);

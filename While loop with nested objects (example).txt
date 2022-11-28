@@ -1,0 +1,34 @@
+const person = {
+  name: "Vlad",
+  friend: {
+    name: "Ivan",
+    friend: {
+      name: "Tyutya",
+    },
+  },
+};
+
+let currentPerson = person;
+while (currentPerson.friend != null) {
+  console.log(currentPerson.name);
+  currentPerson = currentPerson.friend;
+}
+
+// Using the break keyword inside the loop
+
+const person = {
+  name: "Vlad",
+  friend: {
+    name: "Ivan",
+    friend: {
+      name: "Tyutya",
+    },
+  },
+};
+
+let currentPerson = person;
+while (currentPerson.friend != null) {
+  if (currentPerson.name === "Ivan") break;
+  console.log(currentPerson.name);
+  currentPerson = currentPerson.friend;
+}

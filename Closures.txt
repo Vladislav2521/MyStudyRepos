@@ -1,0 +1,43 @@
+let a = 1;
+
+function print() {
+  console.log(a);
+}
+
+a = 2;
+print();
+---------------------------
+
+let a = 1;
+
+function print() {
+  console.log(a);
+}
+
+print();
+---------------------------
+
+function print(variable) {
+  return function func(variable2) {
+    console.log(variable);
+    console.log(variable2);
+  };
+}
+
+let a = print(1);
+a(2);
+
+(This is the texbook example of a closure).
+
+---------------------------
+function print(variable) {
+  let c = 3;
+  return function func(variable2) {
+    console.log(variable);
+    console.log(variable2);
+    console.log(c);
+  };
+}
+
+let a = print(1);
+a(2);

@@ -1,0 +1,58 @@
+WHILE
+let count = 0;
+while (count < 10) {
+  console.log(count);
+  if (count == 4 ) {
+    break;
+  }
+  count++;
+-----------------------------
+DOWHILE
+/*let count = 10;
+do {
+  console.log(count);
+  count--;
+} while (count > 7);
+*/
+-----------------------------
+FOR
+/*let arr = [5, 7, 9, 1, 0];
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i] * 2);
+}
+*/
+------------------------------
+FOR OF
+/*let arr = [5, 7, 9, 1, 0];
+for (let item of arr) {
+  console.log(item * 2);
+}
+*/
+
+FOR IN (for objects)
+let obj = {
+  name: "Petr",
+  age: 25,
+  number: 88009944654,
+};
+
+for (let key in obj) {
+  console.log(`Ключ ${key}, Значение ${obj[key]}`);
+}
+-------------------------------
+let arr = [5, 7, 9, 1, 0];
+arr.forEach(function (item, i, array) {
+  console.log(`Элемент: ${item}
+  Индекс: ${i}
+  Массив: ${array}
+  Удвоенный элемент: ${item * 2}
+  Разделенный элемент ${item / 2}`);
+  setInterval(() => {
+    console.log(`Элемент: ${item}
+  Индекс: ${i}
+  Массив: ${array}
+  Удвоенный элемент: ${item * 2}
+  Разделенный элемент ${item / 2}`);
+  }, 3000);
+});
+---------------------------------

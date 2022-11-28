@@ -1,0 +1,76 @@
+OUR CLASS EXAMPLE
+
+class Bot {
+  name;
+  health;
+  energy = 100;
+  x = 10;
+  y = 10;
+  constructor(name, health = 100, energy = 100) {
+    this.name = name;
+    this.health = health;
+    this.energy = energy;
+  }
+  MoveForward() {
+    this.y++;
+    this.energy -= 5;
+  }
+  MoveBackward() {
+    this.y--;
+    this.energy -= 5;
+  }
+  Damage(attackPower) {
+    this.health -= attackPower;
+  }
+}
+
+const robot = new Bot("Harry", 120, 20); // Создание экземпляра класса
+const robot2 = new Bot("Mary", 50);
+
+console.log(robot, robot2);
+robot.MoveForward();
+robot2.Damage(5);
+console.log(robot, robot2);
+robot.MoveBackward();
+console.log(robot, robot2);
+robot.Damage(3);
+console.log(robot, robot2);
+
+----------------------------------------------------------------
+CLASS EXAMPLE
+
+function createUser(name, age, human) {
+  return { name: name, age: age, human: true };
+}
+
+function User(name, age) {
+  this.name = name;
+  this.age = age;
+  this.human = true;
+}
+
+const user2 = new User("Vladislav", 28);
+
+const userFunc = createUser("Vladislav", 28);
+console.log(userFunc, user2);
+-------------------------------------------------------------------
+EXAMPLE OF A FUNCTION IN A CLASS
+
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.human = true;
+  }
+
+  printName() {
+    console.log(this.name);
+  }
+}
+
+const user = new User("Vladimir", 25);
+const user2 = new User("Vladislav", 28);
+
+console.log(user, user2);
+user.printName();
+user2.printName();

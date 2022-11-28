@@ -1,0 +1,77 @@
+OBJECTS AND TWO WAYS OF CREATING FUNCTIONS IN AN OBJECT	
+let name = "Kyle";
+const age = 25;
+const favouriteNumber = 3;
+
+let person = {
+  name: "Kyle",
+  age: 25,
+  favouriteNumber: 3,
+  sayHi: function () {
+    console.log("Hi");
+  },
+  sayHi2() {
+    console.log("Hi");
+  },
+};
+person.sayHi2();
+----------------------------------------------
+let car = {
+  make: "Germany",
+  model: "Opel Astra G",
+  condition: "perfectly preserved",
+  isUsed: true,
+  year: 1999,
+  makeNoise() {
+    console.log("Vroom");
+  },
+};
+car.makeNoise();
+console.log(car)
+console.log(car.model);
+----------------------------------------------
+MY OWN EXPERIMENT WITH OBJECTS (ARRAYS AND AN OBJECT WITHIN AN OBJECT)
+let person = {
+  name: "Vlad",
+  hobbies: ["Guitar playing,", "Car driving"],
+  adress: {
+    street: "Kurortnaya 25",
+    city: "Saki",
+  },
+};
+
+function personInfo() {
+  console.log(person.name);
+  console.log(person.hobbies["0"], person.hobbies["1"]);
+  console.log(person.adress.street);
+  console.log(person.adress.city);
+}
+
+personInfo();
+-------------------------------------------------
+let book = {
+  Title: "Farewell to arms",
+  Author: {
+    name: "Ernest Hemingway",
+    age: "dead",
+  },
+};
+function bookInfo() {
+  console.log(book.Title), console.log(book.Author.name, book.Author.age);
+}
+bookInfo();
+--------------------------------------------------
+THIS IS AN EXAMPLE OF REDEFINING A PROPERTY WITHIN AN OBJECT
+let book = {
+  Title: "Farewell To Ass",
+  Author: {
+    name: "Ernest Hemingway",
+    age: "dead",
+  },
+};
+book.Title = "Farewell To Arms";
+
+function bookInfo() {
+  console.log(book.Title), console.log(book.Author.name, book.Author.age);
+}
+bookInfo();

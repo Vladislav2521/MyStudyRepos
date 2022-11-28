@@ -1,0 +1,27 @@
+const favouriteAnimal = "cat";
+
+ if (favouriteAnimal === "cat") {
+   console.log("cats are pretty cool");
+ } else if (favouriteAnimal === "dog") {
+   console.log("they are kinda loud");
+ } else if (favouriteAnimal === "shark") {
+   console.log("that is an interesting choice");
+ } else {
+   console.log("That is cool, but I am unfamiliar with that animal");
+ }
+
+// We can also use this variant here (it is more preferable)
+
+switch (favouriteAnimal) {
+  case "cat":
+    console.log("cats are pretty cool");
+    break;
+  case "dog":
+    console.log("they are kinda loud");
+    break;
+  case "shark":
+    console.log("that is an interesting choice");
+    break;
+  default:
+    console.log("that is cool but I am unfamiliar with that animal");
+}
