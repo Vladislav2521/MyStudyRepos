@@ -1,0 +1,66 @@
+printFalse() || printTrue();
+
+function printTrue() {
+  console.log("true");
+  return true;
+}
+
+function printFalse() {
+  console.log("false");
+  return true;
+}
+// Another examples of short circuit evaluation are below
+let person1 = {
+  name: "Jack",
+  age: 34,
+};
+console.log(person1.job || "unemployed");
+
+var person2 = {
+  name: "Jack",
+  age: 34,
+  job: "teacher",
+};
+console.log(person2.job || "unemployed");
+
+function printName(name) {
+  name = name || "Default";
+  console.log(name);
+}
+printName("Vlad");
+printName();
+
+// Another examples for the "Short Circuit Evaluation" topic:
+const personVlad = {
+  address: {
+    street: "Kurortraya street",
+  },
+};
+if (personVlad != null && personVlad.address != null) {
+  console.log(personVlad.address.street);
+}
+// This code is executed correctly, because the condition is satisfied.
+
+// There is also another way how to write this code using "&&" operator:
+const personNatalie = {
+  address: {
+    street: "Kurortraya street",
+  },
+};
+console.log(
+  personNatalie && personNatalie.address && personNatalie.address.street
+);
+// It works nice as well and it needs less code to be executed.
+
+// The next example is with "undefined" value
+const personJack = undefined;
+console.log(personJack && personJack.address && personJack.address.street);
+// As we see, we get "undefined" being printed out
+
+// Let's see what we gonna get if we have an empty object
+const personHollowMan = {};
+console.log(
+  personHollowMan && personHollowMan.address && personHollowMan.address.street
+);
+// As we see, we have the value "undefined" is being printed out again
+

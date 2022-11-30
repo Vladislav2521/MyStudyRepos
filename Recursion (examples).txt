@@ -1,0 +1,31 @@
+ // Here are some examples of recursiom
+ let sum = 0;
+ for (let i = 1; i <= 10; i++) {
+   sum = sum + i;
+ }
+ console.log(sum);
+
+function sumNumbersBelow(number) {
+  if (number <= 0) return 0;
+  return number + sumNumbersBelow(number - 1);
+}
+
+console.log(sumNumbersBelow(10));
+
+const person = {
+  name: "Vlad",
+  friend: {
+    name: "Ivan",
+    friend: {
+      name: "Tyutya",
+    },
+  },
+};
+
+function printNames(currentPerson) {
+  if (currentPerson == null) return;
+  console.log(currentPerson.name);
+  printNames(currentPerson.friend);
+}
+
+printNames(person);
