@@ -80,7 +80,7 @@ function startNote(noteDetailConnected, gain) {
   const oscillator = audioContext.createOscillator(); // This is going to give us the brand new oscillator. We need to hook it up with all the details
   // from our note.
   oscillator.frequency.value = noteDetailConnected.frequency; // For making the keys to play different frequency notes, we add "value" to "oscilator.frequency"
-  oscillator.type = "sawtooth";
+  oscillator.type = "square";
   oscillator.connect(gainNode).connect(audioContext.destination); // It tells the oscillator to play through our speakers.
   oscillator.start(); // This is going to start up our oscillator and make it to create noises.
   noteDetailConnected.oscillator = oscillator; // We're saving a reference to our note, so next time we call play notes we can stop it inside
